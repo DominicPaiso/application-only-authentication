@@ -1,4 +1,3 @@
-const http = require('http');
 const express = require('express');
 const axios = require('axios');
 var app = express();
@@ -16,11 +15,12 @@ app.use('/', express.static('build'));
 
 
 app.get('/api/', (req,res) => {
-
-    //Hint: You're going to want to encode your key and secret (https://developer.twitter.com/en/docs/basics/authentication/overview/application-only#issuing-application-only-requests)
+    
+    //Insert your consumer key and secret here
+    //Hint: You're going to want to encode them (https://developer.twitter.com/en/docs/basics/authentication/overview/application-only#issuing-application-only-requests)
     let consumer_key = '';
     let consumer_secret = '';
-
+    
     // Token should be "Bearer token credentials"
     let token = '';
 
@@ -58,6 +58,6 @@ app.get('/api/tweets/:s', (req,res) => {
 });
 
 
-// This creates your server!
+// This starts your server!
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => console.log(`Server is listening on ${PORT}`));

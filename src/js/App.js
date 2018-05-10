@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
 import axios from 'axios';
+import React, { Component } from 'react';
 
 // This is your tweet component. It should be pure!
 const Tweet = (props) => {
@@ -39,7 +39,7 @@ class App extends Component {
 
   // This function will update our state with user's input
   setSearch(e) {
-    this.setState({search: e.target.value})
+    //using the user's input, save their search in App's state
   }
 
 
